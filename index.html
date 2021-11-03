@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Church of Nakano Nino</title>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Church</a>
+            <div class="toggle"></div>
+        </header>
+        <img src="imgs/bg.jpg" class="bg">
+        <img src="imgs/nakano.png" class="nino">
+        <div class="content">
+            <h2>Join the church of<br><span>Nakano Nino</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus nemo ea mollitia nisi omnis, tenetur consectetur harum. Obcaecati laudantium esse nulla nesciunt aperiam, vitae maxime reprehenderit pariatur architecto eveniet.</p>
+            <a href="#">Join us</a>
+        </div>
+    </section>
+    <script type="text/javascript">
+        document.addEventListener("mousemove", function(e){
+            const bg = document.querySelector('.bg');
+            const nino = document.querySelector('.nino');
+            const content = document.querySelector('.content');
+
+            bg.style.width = 100 + e.pageX/100 + '%';
+            bg.style.height = 100 + e.pageX/100 + '%';
+            
+            nino.style.right = 100 + e.pageX/2 + 'px';
+            content.style.left = 100 + e.pageX/2.5 + 'px';
+        })
+    </script>
+</body>
+</html>
